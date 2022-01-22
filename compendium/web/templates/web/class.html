@@ -1,0 +1,31 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}
+Classes
+{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/web.css' %}">
+<link rel="stylesheet" href="{% static 'web/card.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+
+<main>
+    {% for class in classes %}
+        <div class='card'>
+            <h1>{{ class.name }}
+            </h1>
+            <br>
+            <ul>
+                <li><b>Hit Die:</b> {{ class.hit_die }}</li>
+                <li><b>Primariy Ability:</b> {{ class.primary_ability }}</li>
+                <li><b>Saving Throw Prof:</b> {{ class.saving_throw_prof }}</li>
+                <li><b>Armor/Weapon Prof:</b> {{ class.armor_wep_prof }}</li>
+            </ul>
+        </div>
+    {% endfor %}
+</main>
+
+{% endblock content %}

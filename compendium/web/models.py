@@ -5,7 +5,7 @@ from django.db import models
 class Weapon(models.Model):
 
     name = models.CharField(db_column='Name', max_length=60, blank=True, null=True)
-    desc = models.CharField(db_column='Description', max_length=260, blank=True, null=True)
+    description = models.CharField(db_column='Description', max_length=260, blank=True, null=True)
     category = models.CharField(db_column='Category', max_length=60, blank=True, null=True)
     type = models.CharField(db_column='Type', max_length=60, blank=True, null=True)
     cost = models.CharField(db_column='Cost', max_length=60, blank=True, null=True)
@@ -22,7 +22,7 @@ class Weapon(models.Model):
 class Armor(models.Model):
 
     name = models.CharField(db_column='Name', max_length=60, blank=True, null=True)
-    desc = models.CharField(db_column='Description', max_length=260, blank=True, null=True)
+    description = models.CharField(db_column='Description', max_length=260, blank=True, null=True)
     category = models.CharField(db_column='Category', max_length=60, blank=True, null=True)
     type = models.CharField(db_column='Type', max_length=60, blank=True, null=True)
     ac = models.CharField(db_column='Armor Class', max_length=60, blank=True, null=True)
@@ -39,7 +39,7 @@ class Armor(models.Model):
 class Item(models.Model):
 
     name = models.CharField(db_column='Name', max_length=60, blank=True, null=True)
-    desc = models.CharField(db_column='Description', max_length=260, blank=True, null=True)
+    description = models.CharField(db_column='Description', max_length=260, blank=True, null=True)
     cost = models.CharField(db_column='Cost', max_length=60, blank=True, null=True)
     property = models.CharField(db_column='Properties', max_length=60, blank=True, null=True)
     weight = models.IntegerField(db_column='Weight', blank=True, null=True)
@@ -54,7 +54,7 @@ class Item(models.Model):
 class Char_class(models.Model):
 
     name = models.CharField(max_length=60)
-    desc = models.CharField(max_length=6000)
+    description = models.CharField(max_length=6000)
     hit_die = models.CharField(max_length=60)
     primary_ability = models.CharField(max_length=60)
     saving_throw_prof = models.CharField(max_length=60)
@@ -69,7 +69,7 @@ class Char_class(models.Model):
 class Char_race(models.Model):
     
     name = models.CharField(db_column='Name', max_length=60, blank=True, null=True)
-    desc = models.CharField(db_column='Description', max_length=16000, blank=True, null=True)
+    description = models.CharField(db_column='Description', max_length=16000, blank=True, null=True)
     traits = models.CharField(db_column='Traits', max_length=6000, blank=True, null=True)
     size = models.CharField(db_column='Size', max_length=60, blank=True, null=True)
     speed = models.IntegerField(db_column='Speed', blank=True, null=True)

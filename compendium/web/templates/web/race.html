@@ -1,0 +1,30 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}
+Race
+{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/web.css' %}">
+<link rel="stylesheet" href="{% static 'web/card.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+
+<main>
+    {% for race in races %}
+    <div class='card'>
+        <h1>{{ race.name }}
+        </h1>
+        <br>
+        <ul>
+            <li><b>Traits:</b><br> {{ race.traits }}</li>
+            <li><b>Size:</b> {{ race.size }}</li>
+            <li><b>Speed:</b> {{ race.speed }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</main>
+
+{% endblock content %}

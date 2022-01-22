@@ -2,25 +2,26 @@
 {% load static %}
 
 {% block title %}
-Compendium Curator
+Add Item
 {% endblock title %}
 
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'web/web.css' %}">
 <link rel="stylesheet" href="{% static 'web/index.css' %}">
+<link rel="stylesheet" href="{% static 'web/card.css' %}">
 {% endblock extra_head %}
 
 {% block content %}
-
 <main>
-    <div class="index_search">
-        <h1>Compendium Curator</h1>
-        <form class='index_search_form' method="GET" action="" >
-            <input type="search" placeholder="Search the Compendium!">
-            <br>
-            <button class="btn-search" type="submit"> Search </button>
+    <div class='card'>
+        <form action="{% url 'web:additem' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="additem">
         </form>
-        </div>
+    </div>
 </main>
+
+
 
 {% endblock content %}

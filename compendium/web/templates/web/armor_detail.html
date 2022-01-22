@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}
+Compendium Curator
+{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'web/web.css' %}">
+<link rel="stylesheet" href="{% static 'web/card.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+<main>
+    <div class='card'>
+        <h1>{{ armor.name }}
+            {% if armor.modifier is not null%}
+            {{ armor.modifier }}
+            {% endif %}
+        </h1>
+        <h3>{{ armor.description }}</h3>
+        <br>
+        <ul>
+            <li><b>Category:</b> {{ armor.category }}</li>
+            <li><b>Type:</b> {{ armor.type }}</li>
+            <li><b>Cost:</b> {{ armor.cost }}</li>
+            <li><b>AC:</b> {{ armor.ac }}</li>
+            <li><b>Stealth:</b> {{ armor.stealth }}</li>
+            <li><b>Str Req:</b> {{ armor.str_req }}</li>
+            <li><b>Weight:</b> {{ armor.weight }}lbs</li>
+            <li><b>Rarity:</b> {{ armor.rarity }}</li>
+        </ul>
+    </div>
+</main>
+
+{% endblock content %}

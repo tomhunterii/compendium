@@ -1,0 +1,20 @@
+<div class='card'>
+    <div>
+        <h1><a href="web/weapon/{{result.object.id}}">{{ result.object.name }}</a>
+            {% if result.object.modifier is not null%}
+            {{ result.object.modifier }}
+            {% endif %}
+        </h1>
+        <h3>{{ result.object.description }}</h3>
+        <br>
+        <ul>
+            <li><b>Category:</b> {{ result.object.category }}</li>
+            <li><b>Type:</b> {{ result.object.type }}</li>
+            <li><b>Cost:</b> {{ result.object.cost }}</li>
+            <li><b>Damage:</b> {{ result.object.dmg }}</li>
+            <li><b>Properies:</b> {{ result.object.property }}</li>
+            <li><b>Weight:</b> {{ result.object.weight }}lbs</li>
+            <li><b>Rarity:</b> {{ result.object.rarity }}</li>
+        </ul>
+    </div>
+</div>

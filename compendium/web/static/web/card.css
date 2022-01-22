@@ -1,0 +1,40 @@
+h1 {
+    color: rgb(153, 19, 19);
+    font-variant-caps: small-caps;
+}
+
+h3 {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(218, 210, 178);
+    color: rgb(15, 15, 15);
+    padding: 3vw;
+    text-align: center;
+    border-radius: 5%;
+    width: 30vw;
+    margin: 1vw;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.searchform {
+    justify-content: center;
+    text-align: center;
+}
